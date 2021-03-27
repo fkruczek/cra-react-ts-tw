@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { ReactElement } from 'react'
+import tw from 'twin.macro'
+import Button from './components/Button'
+import Logo from './components/Logo'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const styles = {
+  // Move long class sets out of jsx to keep it scannable
+  container: ({ hasBackground }: { hasBackground: boolean }) => [
+    tw`flex flex-col items-center justify-center h-screen`,
+    hasBackground && tw`bg-gradient-to-b from-white to-black`,
+  ],
 }
 
-export default App;
+const App = (): ReactElement => (
+  <div css={styles.container({ hasBackground: true })}>
+    <div tw="flex flex-col justify-center h-full gap-y-5">
+      <Button variant="primary">Submit</Button>
+      <Button variant="secondary">Cancel</Button>
+      <Button isSmall>Close</Button>
+    </div>
+    <Logo />
+  </div>
+)
+
+export default App
