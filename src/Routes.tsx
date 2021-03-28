@@ -8,7 +8,7 @@ const Routes = (): ReactElement => (
   <Suspense fallback={<div>Loading...</div>}>
     <Switch>
       <Route path="/" component={Home} exact />
-      <Route path="about" component={About} exact />
+      <Route path="/about" component={About} exact />
     </Switch>
   </Suspense>
 )
