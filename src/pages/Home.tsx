@@ -11,17 +11,15 @@ const styles = {
   ],
 }
 
-const Home = (): ReactElement => {
-  return (
-    <div css={styles.container({ hasBackground: true })}>
-      <div tw="flex flex-col justify-center h-full gap-y-5">
-        <Button variant="primary">Submit</Button>
-        <Button variant="secondary">Cancel</Button>
-        <Button isSmall>Close</Button>
-      </div>
-      <Logo />
+const Home = (): ReactElement => (
+  <div css={styles.container({ hasBackground: true })}>
+    <div tw="flex flex-col justify-center h-full gap-y-5">
+      <Button variant="primary">Submit</Button>
+      <Button variant="secondary">Cancel</Button>
+      <Button isSmall>Close</Button>
     </div>
-  )
-}
+    <Logo />
+  </div>
+)
 
 export default Home
