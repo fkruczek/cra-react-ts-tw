@@ -10,7 +10,7 @@ const styles = {
     hasBackground && tw`bg-gradient-to-b from-white to-black`,
   ],
 }
-
+//
 const App = (): ReactElement => (
   <div css={styles.container({ hasBackground: true })}>
     <div tw="flex flex-col justify-center h-full gap-y-5">
