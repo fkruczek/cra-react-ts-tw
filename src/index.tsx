@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
+import './i18n'
+import Providers from './Providers'
 import GlobalStyles from './styles/GlobalStyles'
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyles />
-    <App />
+    <Providers>
+      <GlobalStyles />
+      <App />
+    </Providers>
   </React.StrictMode>,
   document.getElementById('root')
 )
